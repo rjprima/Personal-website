@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.heading {
+  font-size: 2rem;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --colormode1: white;
+  --colormode2: rgb(50,50,50);
+}
+
+body {
+  background-image: url('../public/websitebackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
