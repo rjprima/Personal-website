@@ -14,10 +14,11 @@
 :root {
   --colormode1: white;
   --colormode2: rgb(50,50,50);
+  --bgc: url('../public/websitebackground.png');
 }
 
 body {
-  background-image: url('../public/websitebackground.png');
+  background-image: var(--bgc);
   background-size: cover;
   background-repeat: no-repeat;
 }

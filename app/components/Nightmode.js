@@ -10,6 +10,7 @@ export default function NightMode() {
 
     let root;
     let body;
+    let x;
 
     useEffect(() => {
         root = document.documentElement;
@@ -19,14 +20,14 @@ export default function NightMode() {
     function toggle() {
         if (on === 0) {
             root.style.setProperty('--colormode1','rgb(50,50,50)');
-            root.style.setProperty('--colormode2','white')
-//            body.style.backgroundImage = "url('../public/websitebackgrounddark.png')";
+            root.style.setProperty('--colormode2','white');
+            //root.style.setProperty('--bgc','url("../public/websitebackground.5dae1971.png")');
             on = 1;
         }
         else {
             root.style.setProperty('--colormode1', 'white');
             root.style.setProperty('--colormode2', 'rgb(50,50,50)');
- //           body.style.backgroundImage = "url('../public/websitebackground.png')";
+            //root.style.setProperty('--bgc',"url('../public/websitebackground.png')")
             on = 0;
         }
     }
