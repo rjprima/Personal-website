@@ -17,15 +17,19 @@ export default function Contact() {
         }));
     }
 
-const handleSubmit = (e) => {
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
-    const body = encodeURIComponent(
-        `Hi, \n` +
-        `Name: ${formData.name} \n` +
-        `Email: ${formData.email} \n` +
-        `Message: ${formData.message}`
-    )
-}
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
+        const body = encodeURIComponent(
+            `Hi, \n\n` +
+            `New message from personal website. \n\n` +
+            `Name: ${formData.name} \n` +
+            `Email: ${formData.email} \n` +
+            `Message: ${formData.message}`
+        )
+
+        window.location.href = `mailto:rileyprimavera5@gmail.com?subject=${subject}&body=${body}`;
+    }
 
     return (
         <div>
@@ -33,24 +37,50 @@ const handleSubmit = (e) => {
             <p>I'm currently open to new opportunities and collaborations</p>
 
             <div>
-                <form>
+                <p className="fixed top-0 left-[25px] text-[2.7rem] z-11 invisible md:visible text-(--colormode1)"><b>Contact</b></p>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <div>
-                            <label>Name</label>
-                            <input type="text" name="name" title="please input your name" onChange={handleChange} required></input>
+                            <label>Name </label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            title="please input your name"  
+                            required
+                            placeholder="Your Name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            />
                         </div>
 
                         <div>
-                            <label>Email</label>
-                            <input type="email" name="email" title="please input your email" required></input>
+                            <label>Email </label>
+                            <input 
+                            type="email" 
+                            name="email" 
+                            title="please input your email" 
+                            required 
+                            placeholder="your.email@example.com"
+                            value={formData.email}
+                            onChange={handleChange}
+                            />
                         </div>
 
                         <div>
-                            <label>Message</label>
-                            <input type="message" name="message" title="please input your message" required></input>
+                            <label>Message </label>
+                            <input 
+                            type="message" 
+                            name="message"
+                            rows="5" 
+                            title="please input your message" 
+                            required 
+                            placeholder="Hello! I'd like to talk about..."
+                            value={formData.message}
+                            onChange={handleChange}
+                            />
                         </div>
 
-                        <button type="submit" onClick={handleSubmit}>Submit</button>
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
             </div>

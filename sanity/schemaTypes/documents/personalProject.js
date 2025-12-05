@@ -30,9 +30,9 @@ export default {
             },
         },
         {
-            name: "slug",
-            title: "Slug",
-            type: "slug",
+            name: "id",
+            title: "Project ID",
+            type: "string",
             validation: (Rule) => Rule.required(),
             options: {
                 source: "title",

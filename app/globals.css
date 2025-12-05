@@ -11,6 +11,13 @@
   align-items: center;
 }
 
+.oval {
+  height: 200px;
+  width: 300px;
+  background-color: #555;
+  border-radius: 80%;
+}
+
 :root {
   --colormode1: white;
   --colormode2: rgb(50,50,50);

@@ -33,7 +33,7 @@ export default function NightMode() {
     }
     return (
         <div>
-            <button onClick={toggle} type="button">NightMode</button>
+            <button onClick={toggle} type="button" className="md:hover:underline relative top-10">NightMode</button>
         </div>
     )
 }

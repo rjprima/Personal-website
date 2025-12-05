@@ -7,7 +7,7 @@ async function getProjectObj() {
     description,
     link,
     image,  
-    slug
+    id
   }`;
 
   const projects = await client.fetch(query);
@@ -19,10 +19,11 @@ export default async function projectposts() {
 
     return (
         <div>
-            <div className="absolute left-[calc(50%-300px)] w-[600px] h-full pb-[40.6%] bg-white z-[-2] border border-black"></div>
-            <div className="relative flex left-[calc(50%-300px)] w-[600px] justify-around z-[-1] flex-wrap bg-white border border-black">
+            <p className="fixed top-0 left-[25px] text-[2.7rem] z-11 invisible md:visible text-(--colormode1)"><b>Projects</b></p>
+            <div className="absolute left-[calc(50%-300px)] w-[600px] h-full bg-(--colormode1) border border-black"></div>
+            <div className="relative flex left-[calc(50%-300px)] w-[600px] justify-center flex-wrap">
                 {projects.map((project) => (
-                <ProjectPostObj key={project.slug} project={project} />
+                <ProjectPostObj key={project.id} project={project} />
                 ))}
             </div>
         </div>
