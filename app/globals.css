@@ -7,7 +7,6 @@
 .centered {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -27,5 +26,4 @@
 body {
   background-image: var(--bgc);
   background-size: cover;
-  background-repeat: no-repeat;
 }

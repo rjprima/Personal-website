@@ -20,7 +20,7 @@ export default async function projectposts() {
     return (
         <div>
             <p className="fixed top-0 left-[25px] text-[2.7rem] z-11 invisible md:visible text-(--colormode1)"><b>Projects</b></p>
-            <div className="absolute left-[calc(50%-300px)] w-[600px] h-full bg-(--colormode1) border border-black"></div>
+            <div className="absolute left-[calc(50%-300px)] w-[600px] h-full bg-(--colormode1) border border-black rounded-[25px] shadow-2xl"></div>
             <div className="relative flex left-[calc(50%-300px)] w-[600px] justify-center flex-wrap">
                 {projects.map((project) => (
                 <ProjectPostObj key={project.id} project={project} />
