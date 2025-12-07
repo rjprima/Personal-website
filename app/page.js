@@ -1,7 +1,9 @@
 'use client';
 
+import { Ultra } from 'next/font/google';
 import Cloudobj from './components/cloud';
 import Image from 'next/image';
+import Nightmode from './components/Nightmode'
 
 export default function Home() {
   return (
@@ -21,9 +23,10 @@ export default function Home() {
       </div>
       <div className="centered relative w-40 h-40 bg-(--colormode1) rounded-[25px] border left-[1300px] top-[-300px]">
         <p className="text-(--colormode2)">Quick Links</p>
-        <ui className="text-(--colormode2)">
+        <ul className="text-(--colormode2) list-disc">
           <li><a href="https://github.com/rjprima" className="md:hover:underline">GitHub</a></li>
-        </ui>
+          <li><a href="https://www.linkedin.com/in/riley-primavera-617a49396/" className="md:hover:underline">LinkedIn</a></li>
+        </ul>
       </div>
       <div className="flex justify-around flex-col relative left-[calc(50%-300px)] top-50 w-[600px]">
             <p className="text-(--colormode2) text-[20px] text-center"><b>I'm currently exploring these specialties:</b></p>
